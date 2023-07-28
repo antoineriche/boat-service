@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=boatapi'
+      - 'POSTGRES_PASSWORD=Bo@t1_23'
+      - 'POSTGRES_USER=boatuser'
+    ports:
+      - '5500:5432'

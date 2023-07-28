@@ -1,0 +1,4 @@
+id;login;password_hash;first_name;last_name;email;activated
+1;ariche;$2a$10$bpNMKeaQXKpJ4JVxOHWvu.tZdmCLT9nKcZreJ/ELfCgmTCyhC7GPy;Antoine;RICHE;riche.ant@gmail.com;true
+2;test;$2a$10$TA.UfUqLa8uDeGkt95FfLeq7T5Y5vpDpzAtvJrHSLzLliY/PARXUq;test;TOTO;test@test.fr;true
+

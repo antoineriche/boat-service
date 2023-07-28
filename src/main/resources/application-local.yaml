@@ -1,0 +1,22 @@
+spring:
+  liquibase:
+    contexts: dev
+
+logging:
+  level:
+    com.ariche.boatapi: DEBUG
+    liquibase.changelog: INFO
+
+liquibase:
+  username: boatuser
+  password: Bo@t1_23
+  host: localhost
+  port: 5500
+  database: boatapi
+
+token:
+  secret-key: OWE4Nzk3Y2E3Yzk3YTAzMjU0YzJlNDM2YjEwYTYzMDE3NTc5ZWE2NDdkOTg2MmYwNTg0Y2FmYTYzM2MzZjk1YTI5MDQzOTYwMGJjNzZhN2Y3Zjc4ZWNmMTkxMWM3NTk5MzU1OTgyNDgxODUzN2QwZTEyODcwMWI2NmMzMjYzNGU=
+  validity: 300
+io:
+  path:
+    storage: src/main/resources/io/storage/

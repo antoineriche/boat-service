@@ -1,0 +1,35 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+  <changeSet author="richeantoine (generated)" id="load-canals" context="dev">
+    <loadData encoding="UTF-8"
+              file="db/data/dev/boat-sample.csv"
+              separator=";"
+              tableName="boats">
+    </loadData>
+  </changeSet>
+
+  <changeSet author="richeantoine (generated)" id="load-authorities">
+    <loadData encoding="UTF-8"
+              file="db/data/authorities.csv"
+              separator=";"
+              tableName="_authority"/>
+  </changeSet>
+
+  <changeSet author="richeantoine (generated)" id="load-users-dev" context="dev">
+    <loadData encoding="UTF-8"
+              file="db/data/dev/users.csv"
+              separator=";"
+              tableName="_user"/>
+  </changeSet>
+
+  <changeSet author="richeantoine (generated)" id="load-user-authorities" context="dev">
+    <loadData encoding="UTF-8"
+              file="db/data/dev/users_authorities.csv"
+              separator=";"
+              tableName="_user_authority"/>
+  </changeSet>
+
+</databaseChangeLog>

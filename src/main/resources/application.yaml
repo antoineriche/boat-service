@@ -1,0 +1,69 @@
+spring:
+  application:
+    name: BoatAPI
+    version: @project.version@
+  jpa:
+    open-in-view: false
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        show_sql: false
+        use_sql_comments: false
+        format_sql: false
+        jdbc:
+          time_zone: UTC
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${liquibase.host}:${liquibase.port}/${liquibase.database}
+    username: ${liquibase.username}
+    password: ${liquibase.password}
+  liquibase:
+    driver-class-name: org.postgresql.Driver
+    change-log: classpath:db/changelog/master.xml
+    url: jdbc:postgresql://${liquibase.host}:${liquibase.port}/${liquibase.database}
+    user: ${liquibase.username}
+    password: ${liquibase.password}
+    contexts: # to be overridden
+  servlet:
+    multipart:
+      max-file-size: 3MB
+      max-request-size: 5MB
+  jackson:
+    property-naming-strategy: LOWER_CAMEL_CASE
+    default-property-inclusion: non_null
+
+server:
+  port: 8080
+  servlet:
+    context-path: "/"
+
+logging:
+  level:
+    root: INFO
+    com.ariche.boatapi: INFO
+    liquibase.changelog: INFO
+    com.amazonaws: INFO
+
+token:
+  secret-key: # to be overridden
+  validity: 3600
+
+
+cos:
+  endpoint: # to be overridden
+  location: # to be overridden
+  endpoint-IAM: # to be overridden
+  timeout: 30000 # to be overridden
+  bucket-name: # to be overridden
+  credentials:
+    api-key: # to be overridden
+    resource-id: # to be overridden
+
+liquibase:
+  username: # to be overridden
+  password: # to be overridden
+  host: # to be overridden
+  port: # to be overridden
+  database: # to be overridden
